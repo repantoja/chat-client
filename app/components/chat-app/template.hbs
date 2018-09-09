@@ -1,0 +1,43 @@
+     <div class="container bg-light">
+        <div class="row">
+          <div class="col-md-4 order-md-2 mb-4">
+            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                
+                <ul class="nav flex-column">
+                    {{nav-sidebar model=model.allRooms.roomNames}}
+                    
+                  
+                </ul>
+                <nav class="navbar navbar-light">
+                    <form class="form-inline">
+                        <input class="form-control mr-sm-2" type="Room" placeholder="Room" aria-label="Room">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Create</button>
+                    </form>
+                </nav>
+            
+            </div>
+        </div>
+        <div class="col-md-8 order-md-5 border border-primary">
+            <main role="main" class="px-1">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+                    {{#if model.activeRoom }}
+                        <h2>Chat room {{model.activeRoom.room.name}}</h2>
+                        {{list-messages model=model.activeRoom.messages}}                        
+                    
+                    {{else}}
+                        <h2>Please select a room</h2>
+                    {{/if}}
+                    
+                        
+                    
+                </div>
+
+                <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+
+          
+          
+            </main>
+        </div>
+        
+      </div>
+    </div>

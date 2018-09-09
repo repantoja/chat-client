@@ -1,0 +1,11 @@
+body {
+    overflow-x: hidden; /* Prevent scroll on narrow devices */
+    padding-top: 56px;
+    height: 100%;
+    
+  }
+  .container{
+      min-height: 100%;
+      overflow:hidden;
+  }
+  

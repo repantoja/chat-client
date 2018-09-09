@@ -1,0 +1,33 @@
+<li class="nav-item">
+    <h3 class="nav-link">
+        <span data-feather="Rooms"></span>
+         Rooms
+    </h3>
+</li>
+    {{#if isRoomEmpty}}
+       <li class="nav-item">No room available</li>
+        {{else}}
+         {{#each model as |room|}}
+            <li class="nav-item">
+                    {{#link-to "room" room.id}}
+                        <div class="nav-link" href="#">
+                            <span data-feather="file"></span>
+                            {{room.name}}
+                        </div>
+                    {{/link-to}}
+            </li>
+        {{/each}}
+   {{/if}}
+
+<li class="nav-item">
+                        <a class="nav-link" href="#">
+                        <span data-feather="file"></span>
+                        Users
+                            </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                        <span data-feather="shopping-cart"></span>
+                        History
+                        </a>
+</li>
